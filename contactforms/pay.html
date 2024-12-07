@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement Sécurisé</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Conteneur principal */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Centrer verticalement */
+        }
+
+        /* Conteneur de paiement */
+        .payment-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            text-align: center; /* Centrer le texte */
+        }
+
+        /* Titre */
+        h1.heading-secondary {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #007bff; /* Couleur principale */
+        }
+
+        /* Texte d'appel à l'action */
+        p.cta-text {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555; /* Couleur secondaire */
+        }
+
+        /* Media Queries pour la réactivité */
+        @media (max-width: 600px) {
+            h1.heading-secondary {
+                font-size: 2em; /* Réduire la taille du titre sur les petits écrans */
+            }
+
+            p.cta-text {
+                font-size: 1em; /* Ajuster la taille du texte d'appel à l'action */
+            }
+        }
+    </style>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+</head>
+<body>
+    <main>
+        <div class="payment-container">
+            <h1 class="heading-secondary">Paiement Sécurisé avec Stripe</h1>
+            <p class="cta-text">Effectuez un paiement rapide et sécurisé en un seul clic.</p>
+            <div class="stripe-buttons">
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1QSeRxLLvgOEkh1Osr0YtEO2"
+                    publishable-key="pk_test_51QNuIbLLvgOEkh1OysrxMxkoES1LQdxAe9WfCUEsQzp2G0mVjrN8QSwcRQBNetQrqydbBLgYZbYoYLQxsRHc3Q7M003mQjct4h">
+                </stripe-buy-button>
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1QTK8YLLvgOEkh1OhaHvbbSR"
+                    publishable-key="pk_test_51QNuIbLLvgOEkh1OysrxMxkoES1LQdxAe9WfCUEsQzp2G0mVjrN8QSwcRQBNetQrqydbBLgYZbYoYLQxsRHc3Q7M003mQjct4h">
+                </stripe-buy-button>
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1QTKRILLvgOEkh1OHJbzzDwW"
+                    publishable-key="pk_test_51QNuIbLLvgOEkh1OysrxMxkoES1LQdxAe9WfCUEsQzp2G0mVjrN8QSwcRQBNetQrqydbBLgYZbYoYLQxsRHc3Q7M003mQjct4h">
+                </stripe-buy-button>
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1QTKfbLLvgOEkh1OhlfBL7UD"
+                    publishable-key="pk_test_51QNuIbLLvgOEkh1OysrxMxkoES1LQdxAe9WfCUEsQzp2G0mVjrN8QSwcRQBNetQrqydbBLgYZbYoYLQxsRHc3Q7M003mQjct4h">
+                </stripe-buy-button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mycontact.js"></script>
+</body>
+</html>
